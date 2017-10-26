@@ -19,7 +19,7 @@
     <preference name="SplashShowOnlyFirstTime" value="false" />
     <preference name="SplashScreen" value="screen" />
     <preference name="SplashScreenDelay" value="3000" />
-	<platform name="windows">
+    <platform name="windows">
         <preference name="windows-target-version" value="10.0" />
     </platform>
     <platform name="android">
@@ -85,4 +85,5 @@
     <plugin name="cordova-plugin-splashscreen" spec="^4.0.3" />
     <plugin name="cordova-plugin-ionic-webview" spec="^1.1.16" />
     <engine name="android" spec="~6.3.0" />
+    <engine name="windows" spec="~5.0.0" />
 </widget>
