@@ -1,0 +1,32 @@
+<ion-header>
+  <ion-navbar>
+    <ion-buttons end>
+      <button ion-button menuToggle>
+        <ion-icon name="menu"></ion-icon>
+      </button>
+    </ion-buttons>
+    <ion-title text-center color="light">Home</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+  <h1 text-center ion-text color="secondary" padding-top >{{greetingMsg}} </h1>
+  <h2 text-center ion-text color="primary" padding-top>Welcome to InfoTrain!</h2>
+
+  <div class="rigidBlock">   </div>
+  <ion-grid *ngIf="!isAuthenticated">
+    <ion-row >
+      <ion-col>
+        <button ion-button padding color="button" medium block [navPush]="signinPage"> Sign in</button>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col>
+        <button ion-button padding color="button" medium block [navPush]="signupPage"> Sign up</button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+</ion-content>

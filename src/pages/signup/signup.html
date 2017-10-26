@@ -1,0 +1,101 @@
+
+<ion-header>
+  <ion-navbar>
+    <ion-buttons start>
+      <button ion-button icon-only menuToggle>
+        <ion-icon name="menu"></ion-icon>
+      </button>
+    </ion-buttons>
+    <ion-title>Signup</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+  <form #f="ngForm" (ngSubmit)="onSignup(f)">
+    <ion-list>
+      <ion-item>
+        <ion-label color="primary" stacked>E-mail</ion-label>
+        <ion-input
+          type="email"
+          ngModel
+          name="email"
+          required></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label color="primary" stacked>Password</ion-label>
+        <ion-input
+          type="password"
+          ngModel
+          name="password"
+          required
+          [minlength]="6"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label color="primary" stacked>Confirm Password</ion-label>
+        <ion-input
+          type="password"
+          ngModel
+          name="confirmPassword"
+          required
+          [minlength]="6"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label color="primary" stacked>First Name</ion-label>
+        <ion-input
+          type="text"
+          ngModel
+          name="firstName"
+         ></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label color="primary" stacked>Last Name</ion-label>
+        <ion-input
+          type="text"
+          ngModel
+          name="lastName"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label color="primary" stacked>Address</ion-label>
+        <ion-input
+          type="text"
+          ngModel
+          name="address"
+        ></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label color="primary" stacked>State</ion-label>
+        <ion-input
+          type="text"
+          ngModel
+          name="state"
+        ></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label color="primary" stacked>Zip code</ion-label>
+        <ion-input
+          type="number"
+          ngModel
+          name="zipCode"
+        ></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label color="primary" stacked>Phone No</ion-label>
+        <ion-input
+          type="number"
+          ngModel
+          name="phoneNo"
+        ></ion-input>
+      </ion-item>
+
+    </ion-list>
+    <button ion-button block type="submit" [disabled]="!f.valid" >Signup</button>
+  </form>
+</ion-content>
